@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A4B1878E-F613-4626-9BD3-16C51BAE2A22}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LinkeddinDominator</RootNamespace>
+    <AssemblyName>LinkeddinDominator</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChilkatDotNet2">
+      <HintPath>..\Libs\32 Bit dlls\ChilkatDotNet2.dll</HintPath>
+    </Reference>
+    <Reference Include="FirstFloor.ModernUI">
+      <HintPath>..\packages\ModernUI.WPF.1.0.6\lib\net45\FirstFloor.ModernUI.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Libs\32 Bit dlls\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.65.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\32 Bit dlls\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit.Extended">
+      <HintPath>..\Libs\WPFToolkit.Extended.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="CustomUserControls\UserControlAddConnectionByEmail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControls\UserControlAddConnectionByKeyword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControls\UserControlComposeMessageInput.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControls\UserControlGetFirstConnectionForMessageSending.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControls\UserControlGetGroupAndMembers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControls\UserControlGetGroupForRemove.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControls\UserControlGEtGroupsForStatusUpdate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControls\UserControlKeyword_Title.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControls\UserControlLIScraperPremiumOption.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControls\UserControlLISInputs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControls\UserControlLISSearchByUrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControls\UserControlMessageInputForGroups.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControls\UserControlMobilePhones.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomUserControls\UserControl_LIScraper_IndustryLanRelationship.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControls\UserControl_LIS_Groups.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControls\UserControl_SalesNaviagtor_IndustryLangRelationship.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControls\UserControl_SalesNaviagtor_PremiumOption.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControls\UserControl_SalesNaviagtor_TitleAndKeyword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomUserControls\UserControl_SalesNavigator_Input.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LicensingWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="CustomUserControls\UserControlAddConnectionByEmail.xaml.cs">
+      <DependentUpon>UserControlAddConnectionByEmail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControls\UserControlAddConnectionByKeyword.xaml.cs">
+      <DependentUpon>UserControlAddConnectionByKeyword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControls\UserControlComposeMessageInput.xaml.cs">
+      <DependentUpon>UserControlComposeMessageInput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControls\UserControlGetFirstConnectionForMessageSending.xaml.cs">
+      <DependentUpon>UserControlGetFirstConnectionForMessageSending.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControls\UserControlGetGroupAndMembers.xaml.cs">
+      <DependentUpon>UserControlGetGroupAndMembers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControls\UserControlGetGroupForRemove.xaml.cs">
+      <DependentUpon>UserControlGetGroupForRemove.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControls\UserControlGEtGroupsForStatusUpdate.xaml.cs">
+      <DependentUpon>UserControlGEtGroupsForStatusUpdate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControls\UserControlKeyword_Title.xaml.cs">
+      <DependentUpon>UserControlKeyword_Title.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControls\UserControlLIScraperPremiumOption.xaml.cs">
+      <DependentUpon>UserControlLIScraperPremiumOption.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControls\UserControlLISInputs.xaml.cs">
+      <DependentUpon>UserControlLISInputs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControls\UserControlLISSearchByUrl.xaml.cs">
+      <DependentUpon>UserControlLISSearchByUrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControls\UserControlMessageInputForGroups.xaml.cs">
+      <DependentUpon>UserControlMessageInputForGroups.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControls\UserControlMobilePhones.xaml.cs" />
+    <Compile Include="CustomUserControls\UserControl_LIScraper_IndustryLanRelationship.xaml.cs">
+      <DependentUpon>UserControl_LIScraper_IndustryLanRelationship.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControls\UserControl_LIS_Groups.xaml.cs">
+      <DependentUpon>UserControl_LIS_Groups.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControls\UserControl_SalesNaviagtor_IndustryLangRelationship.xaml.cs">
+      <DependentUpon>UserControl_SalesNaviagtor_IndustryLangRelationship.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControls\UserControl_SalesNaviagtor_PremiumOption.xaml.cs">
+      <DependentUpon>UserControl_SalesNaviagtor_PremiumOption.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControls\UserControl_SalesNaviagtor_TitleAndKeyword.xaml.cs">
+      <DependentUpon>UserControl_SalesNaviagtor_TitleAndKeyword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUserControls\UserControl_SalesNavigator_Input.xaml.cs">
+      <DependentUpon>UserControl_SalesNavigator_Input.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LicenseManager.cs" />
+    <Compile Include="LicensingWindow.xaml.cs">
+      <DependentUpon>LicensingWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageLoader.cs" />
+    <Compile Include="Pages\PagesAccount\ManageAccounts.xaml.cs" />
+    <Compile Include="Pages\PagesAddConnection\UserControlsAddConnection.xaml.cs">
+      <DependentUpon>UserControlsAddConnection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesGroup\UserControlsGroupStatusUpdate.xaml.cs">
+      <DependentUpon>UserControlsGroupStatusUpdate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesGroup\UserControlsInviteMembersToGroup.xaml.cs">
+      <DependentUpon>UserControlsInviteMembersToGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesGroup\UserControlsJoinFriendGroup.xaml.cs">
+      <DependentUpon>UserControlsJoinFriendGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesGroup\UserControlsJoinGroupUsingURL.xaml.cs">
+      <DependentUpon>UserControlsJoinGroupUsingURL.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesGroup\UserControlsJoinSearchGroup.xaml.cs">
+      <DependentUpon>UserControlsJoinSearchGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesGroup\UserControlsLinkedMessageBuster.xaml.cs">
+      <DependentUpon>UserControlsLinkedMessageBuster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesGroup\UserControlsRemoveGroups.xaml.cs">
+      <DependentUpon>UserControlsRemoveGroups.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesJoin\UserControlsJoinFriendGroup.xaml.cs">
+      <DependentUpon>UserControlsJoinFriendGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesJoin\UserControlsJoinSearchGroup.xaml.cs">
+      <DependentUpon>UserControlsJoinSearchGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesMessage\UserControlsComposeMessage.xaml.cs">
+      <DependentUpon>UserControlsComposeMessage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesMessage\UserControlsMessageGroupMember.xaml.cs">
+      <DependentUpon>UserControlsMessageGroupMember.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesMessage\UserControlsMessageGroupMemberUsingExcelInput.xaml.cs">
+      <DependentUpon>UserControlsMessageGroupMemberUsingExcelInput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesScraper\UserControlsCompanyEmployeeScraper.xaml.cs">
+      <DependentUpon>UserControlsCompanyEmployeeScraper.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesScraper\UserControlsFriendsGroupScraper.xaml.cs">
+      <DependentUpon>UserControlsFriendsGroupScraper.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesScraper\UserControlsJobScraper.xaml.cs">
+      <DependentUpon>UserControlsJobScraper.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesScraper\UserControlsLinkedinScraper.xaml.cs">
+      <DependentUpon>UserControlsLinkedinScraper.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesScraper\UserControlsSalsesNavigator.xaml.cs">
+      <DependentUpon>UserControlsSalsesNavigator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesSearch\UserControlsLinkedinSearch.xaml.cs">
+      <DependentUpon>UserControlsLinkedinSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesProxy\ProxyManager.xaml.cs">
+      <DependentUpon>ProxyManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesSettings\Appearance.xaml.cs">
+      <DependentUpon>Appearance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagesSettings\AppearanceViewModel.cs" />
+    <Compile Include="Pages\PagesSettings\UserControlsDBCSettings.xaml.cs">
+      <DependentUpon>UserControlsDBCSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Page Include="Pages\PagesAccount\ManageAccounts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\PagesAddConnection\UserControlsAddConnection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesGroup\UserControlsGroupStatusUpdate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesGroup\UserControlsInviteMembersToGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesGroup\UserControlsJoinFriendGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesGroup\UserControlsJoinGroupUsingURL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesGroup\UserControlsJoinSearchGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesGroup\UserControlsLinkedMessageBuster.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesGroup\UserControlsRemoveGroups.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesJoin\UserControlsJoinFriendGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesJoin\UserControlsJoinSearchGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesMessage\UserControlsComposeMessage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesMessage\UserControlsMessageGroupMember.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesMessage\UserControlsMessageGroupMemberUsingExcelInput.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesScraper\UserControlsCompanyEmployeeScraper.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesScraper\UserControlsFriendsGroupScraper.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesScraper\UserControlsJobScraper.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesScraper\UserControlsLinkedinScraper.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesScraper\UserControlsSalsesNavigator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesSearch\UserControlsLinkedinSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesProxy\ProxyManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesSettings\Appearance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagesSettings\UserControlsDBCSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Accounts\Accounts.csproj">
+      <Project>{10be8bd6-fb6a-40ac-894c-e5ed32c31660}</Project>
+      <Name>Accounts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Add Connection\Add Connection.csproj">
+      <Project>{2f75f26d-8cf0-4ff0-a29f-6e42412a9c15}</Project>
+      <Name>Add Connection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaseLibLD\BaseLibLD.csproj">
+      <Project>{8bdcc760-f149-4998-99c2-48889c0edbed}</Project>
+      <Name>BaseLibLD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaseLib\BaseLib.csproj">
+      <Project>{85977246-de21-44cc-b798-ee7cacef001f}</Project>
+      <Name>BaseLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Groups\Groups.csproj">
+      <Project>{8976628f-74e8-4a58-b97a-fc7aaf77a0b7}</Project>
+      <Name>Groups</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Messages\Messages.csproj">
+      <Project>{61849d75-1ac3-4d80-ad44-d6438f6fa8da}</Project>
+      <Name>Messages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scraper\Scraper.csproj">
+      <Project>{41bdf97a-2fc3-4c2a-9b6d-f13015485e2a}</Project>
+      <Name>Scraper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Search\Search.csproj">
+      <Project>{b92bf46b-3cf2-4da4-9263-8643d8b36ae0}</Project>
+      <Name>Search</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

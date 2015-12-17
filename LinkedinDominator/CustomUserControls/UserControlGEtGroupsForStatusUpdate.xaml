@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="LinkeddinDominator.CustomUserControls.UserControlGEtGroupsForStatusUpdate"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:wpfx="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit/extended"
+              xmlns:dialog="clr-namespace:LinkeddinDominator.CustomUserControls"
+             mc:Ignorable="d" MaxHeight="500" Width="400">
+    <ScrollViewer >
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="59*"/>
+            </Grid.RowDefinitions>
+            <GroupBox Header="Get Group With Users" Margin="0,30,0,1"  >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="26*"/>
+                        <ColumnDefinition Width="71*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Height="26" x:Name="btn_GroupStatusUpdate_GetGroups" Content="Get Groups"  Click="btn_GroupStatusUpdate_GetGroups_Click_1" Margin="0,0,0,1"  />
+                    <ComboBox MinWidth="100" Height="26" Name="cmb_group_status_selecedAcc" SelectionChanged="cmb_group_status_selecedAcc_SelectionChanged" Grid.Column="1" >
+                        <ComboBoxItem></ComboBoxItem>
+                    </ComboBox>
+
+
+
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Groups" Grid.Row="1">
+
+                <Grid  >
+                    <wpfx:CheckListBox Name="chklstBox_Groups_for_status_Upadte" ItemsSource="{Binding Path=ChkLstGroups}" />
+
+                </Grid>
+            </GroupBox>
+
+            <Grid Margin="0,78,0,36" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <TextBlock Text="Get Groups" Name="Txt_Title"  HorizontalAlignment="Center" FontWeight="Bold" FontSize="18" FontStyle="Normal" Margin="155,0,110,119" Width="135"/>
+
+            <!--<Button Content="save" Grid.Row="2" Grid.Column="0"></Button>-->
+
+        </Grid>
+        <!--<ListBox ItemsSource="{Binding Items}" Margin="4" SelectionMode="Extended">
+            <ListBox.Template>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox Name="check" IsChecked="{Binding IsChecked, Mode=TwoWay}" Margin="3" VerticalAlignment="Center"/>
+                        <ContentPresenter Content="{Binding Value}" Margin="1"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.Template>
+        </ListBox>-->
+    </ScrollViewer>
+</UserControl>

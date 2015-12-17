@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="LinkeddinDominator.Pages.ProxyManager"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+            mc:Ignorable="d" MinHeight="400" MinWidth="600">
+    <ScrollViewer>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="145*"/>
+                <RowDefinition Height="329*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="133*"/>
+                <ColumnDefinition Width="167*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.RowSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="164*"/>
+                    <RowDefinition Height="171*"/>
+                    <RowDefinition Height="185*"/>
+                </Grid.RowDefinitions>
+                <GroupBox Header="Input" Margin="0,0,0,178">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="91*"/>
+                            <ColumnDefinition Width="103*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button  BorderBrush="Green"  Content="Browse" Margin="10,59,10,0" Height="25" Grid.Column="1"  VerticalAlignment="Top"/>
+                        <Label Content="No. of Proxy Loaded : " Margin="10,59,41,0" Height="25" VerticalAlignment="Top"/>
+                        <RadioButton Name="Rbk_ImportPublicProxy" Content="Load public Proxy" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top" Width="128"/>
+
+                        <RadioButton Name="Rbk_ImportPrivateProxy" Content="Load Private Proxy" Grid.Column="1" HorizontalAlignment="Left" Margin="29,16,0,0" VerticalAlignment="Top"/>
+
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header="Setting" Margin="0,142,0,0" Grid.RowSpan="2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="65*"/>
+                            <ColumnDefinition Width="64*"/>
+                        </Grid.ColumnDefinitions>
+                        <CheckBox Name="chkProxy_Proxy_UseUrlFromProxy" Content="Use url from Proxy" Margin="10,10,10,143" Height="25" VerticalAlignment="Top"/>
+                        <TextBox Name="txtProxy_Proxy_UseUrlFromProxy" Height="25" Margin="10,10,97,0" TextWrapping="Wrap" Text="5" Grid.Column="1" VerticalAlignment="Top"/>
+                        <Label Content="No. of Threads Per Proxy" Margin="10,53,10,0" Height="25" VerticalAlignment="Top"/>
+                        <TextBox Name="txtProxy_Proxy_NoOfThreads" Height="25" Margin="10,53,97,0" TextWrapping="Wrap" Text="10" Grid.Column="1" VerticalAlignment="Top"/>
+                        <CheckBox Name="chkProxy_Proxy_ImportWithoutTesting" Content="Import without Testing" Margin="10,134,10,0" Height="26" VerticalAlignment="Top" />
+                        <TextBox Name="txtProxy_Proxy_NoOfAcntsPerProxy" Height="24" Margin="10,92,97,0" TextWrapping="Wrap" Text="5" Grid.Column="1" VerticalAlignment="Top" RenderTransformOrigin="0.487,0.333"/>
+                        <Label Content="No. of accounts per proxy" Margin="10,92,10,0" Height="24" VerticalAlignment="Top"/>
+
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header="Submit Action" Grid.Row="2" Margin="0,0,0,10">
+                    <Grid Margin="0,0,0,-16">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="189*"/>
+                            <ColumnDefinition Width="190*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button  BorderBrush="Green" Name="btnProxy_Proxy_AssignProxyToAcnt" Content="Assign proxy to account" Margin="0,14,10,75" Height="25" />
+                        <Button  BorderBrush="Green" Name="btnProxy_Proxy_ClearProxyFromDb" Content="Clear proxy from Database" Margin="10,14,0,75" Height="25" Grid.Column="1" />
+                        <Button  BorderBrush="Green" Name="btnProxy_Proxy_Start" Content="Start Proxy Testing " Margin="0,58,10,31" Height="25"/>
+                        <Button  BorderBrush="Red" Name="btnProxy_Proxy_Stop" Content="Stop proxy testing" Margin="10,58,0,31" Height="25" Grid.Column="1"/>
+
+                    </Grid>
+                </GroupBox>
+            </Grid>
+            <GroupBox Header="Module Description" Grid.Column="1" Margin="0,0,0,224" />
+            <GroupBox Header="Account Report" Grid.Column="1" Margin="0,139,0,0" Grid.RowSpan="2">
+                <DataGrid/>
+            </GroupBox>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

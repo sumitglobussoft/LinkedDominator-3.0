@@ -1,0 +1,107 @@
+﻿<UserControl x:Class="LinkeddinDominator.Pages.PagesScraper.UserControlsCompanyEmployeeScraper"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="600">
+    <ScrollViewer>
+        <Grid Style="{StaticResource ContentRoot}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="155*"/>
+                <RowDefinition Height="93*"/>
+                <RowDefinition Height="108*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="333*"/>
+                <ColumnDefinition Width="235*"/>
+            </Grid.ColumnDefinitions>
+            <GroupBox Header="Input ">
+                <Grid>
+                    <Grid Margin="0,0,0,94">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="164*"/>
+                            <ColumnDefinition Width="157*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Select EmailId" HorizontalAlignment="Center" Height="25" />
+                        <ComboBox Name="cmb_CompanyEmployeeScraper_SelectAcc" Height="25" Grid.ColumnSpan="2" Margin="158,4,1,4"/>
+
+                    </Grid>
+                    <Grid Margin="0,30,0,64">
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition Width="160*"/>
+                            <ColumnDefinition Width="151*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Content="Browse" Name="btn_CompanyEmployeeScraper_Url" Height="25" Click="btn_CompanyEmployeeScraper_Url_Click" Margin="158,4,2,4" Grid.ColumnSpan="2"/>
+                        <Label Content=" URL" HorizontalAlignment="Center" Margin="60,4" Width="40" Height="25" />
+                    </Grid>
+                    <Grid Margin="0,65,0,30">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="164*"/>
+                            <ColumnDefinition Width="157*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Keyword" HorizontalAlignment="Center" Height="25" />
+                        <TextBox  Height="25" Name="txt_CompanyEmployeeScraper_Keyaword"  TextWrapping="Wrap" Text="" Grid.ColumnSpan="2" Margin="158,4,1,4" />
+                    </Grid>
+                    <Grid Margin="0,99,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="163*"/>
+                            <ColumnDefinition Width="158*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Country" Height="15" HorizontalAlignment="Center" />
+                        <ComboBox Grid.Column="1" Name="cmb_CompanyEmployeeScraper_Country"  Height="25"  />
+
+                    </Grid>
+
+
+
+
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Settings "  Grid.Row="1">
+                <Grid>
+                    <Grid Margin="0,31,0,18">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="43*"/>
+                            <ColumnDefinition Width="85*"/>
+                            <ColumnDefinition Width="35*"/>
+                            <ColumnDefinition Width="106*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Content="Delay :" Height="25"/>
+                        <TextBox x:Name="txt_CompanyEmployeeScraper_MinDelay" Height="25" Margin="12,0,0,0" TextWrapping="Wrap" Text="" Grid.Column="1"/>
+                        <Label Content="To" RenderTransformOrigin="11.462,0.625" Margin="8,4,0,0" Grid.Column="2" Height="25"/>
+                        <TextBox x:Name="txt_CompanyEmployeeScraper_MaxDelay" Height="25"  TextWrapping="Wrap" Text="" Margin="0,2,10,0" Grid.Column="3"/>
+
+                    </Grid>
+
+
+                </Grid>
+
+            </GroupBox>
+            <GroupBox Header="SubmitAction "  Grid.Row="2">
+                <Grid>
+                    <Grid Margin="0,33,0,27">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="129*"/>
+                            <ColumnDefinition Width="140*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="btn_CompanyEmployeeScraper_Start" Content="Start" Height="25" BorderBrush="Green" Click="btn_CompanyEmployeeScraper_Start_Click"/>
+                        <Button x:Name="btn_CompanyEmployeeScraper_Stop" Content="Stop" BorderBrush="Red" Margin="28,-1,0,0" Grid.Column="1" Height="25"/>
+
+
+
+                    </Grid>
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Module Description "  Grid.Column="1">
+                <Grid/>
+            </GroupBox>
+            <GroupBox Header="Module Report "  Grid.Column="1" Grid.Row="1" Grid.RowSpan="2">
+                <Grid/>
+            </GroupBox>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

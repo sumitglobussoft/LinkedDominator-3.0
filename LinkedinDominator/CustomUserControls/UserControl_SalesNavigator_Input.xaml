@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="LinkeddinDominator.CustomUserControls.UserControl_SalesNavigator_Input"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="350">
+    <Grid>
+        <GroupBox Header="Linkedin Scraper Inputs" Height="364" VerticalAlignment="Top">
+            <Grid Margin="0,305,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="149*"/>
+                    <ColumnDefinition Width="189*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btn_IndustryRelationship_Save" Content="Save" Height="25" BorderBrush="Green"  Click="btn_IndustryRelationship_Save_Click" Grid.Column="1" />
+            </Grid>
+        </GroupBox>
+        <Grid Margin="19,23,10,340">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="73*"/>
+                <ColumnDefinition Width="97*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Select EmailId" HorizontalAlignment="Left" VerticalAlignment="Center" Width="86" Margin="0,10,0,11" />
+            <ComboBox Grid.Column="1" Name="cmb_LIScraperInput_selectedAcc" Margin="0,6"/>
+        </Grid>
+
+        <Grid Margin="19,65,10,305">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="147*"/>
+                <ColumnDefinition Width="193*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="First Name" HorizontalAlignment="Left" VerticalAlignment="Center" Width="71" Margin="0,7" />
+            <TextBox Grid.Column="1"  Name="txt_SalesNavigator_FirstName" TextWrapping="Wrap" Text="" Margin="0,2" Height="25" />
+        </Grid>
+        <Grid Margin="19,100,10,269">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="151*"/>
+                <ColumnDefinition Width="199*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Last Name" Height="25"/>
+            <TextBox Grid.Column="1" Name="txt_SaleNavigtor_LastName"  TextWrapping="Wrap" Text="" Height="25" />
+        </Grid>
+
+        <Grid Margin="19,136,10,233">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Location" Height="25"/>
+            <!--<ComboBox Grid.Column="1" Height="25" Name="cmb_SaleNavigtor_Location" />-->
+            <TextBox Grid.Column="1" Height="25" Name="txt_SaleNavigtor_Location" />
+
+        </Grid>
+        <Grid Margin="19,172,10,197">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="151*"/>
+                <ColumnDefinition Width="199*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Country" Height="25" />
+            <ComboBox Grid.Column="1" Height="25" Name="cmb_SaleNavigtor_Country_Code"/>
+        </Grid>
+        <Grid Margin="19,208,10,0" Height="31" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Area wise loc " Height="25"/>
+            <Button Content="Browse" Grid.Column="1"  Name="btn_SaleNavigtor_BrowseAreaWiseLocation" Height="25"/>
+        </Grid>
+        <Grid Margin="19,244,10,126">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="151*"/>
+                <ColumnDefinition Width="97*"/>
+                <ColumnDefinition Width="102*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Postal Code"  Height="25" />
+            <TextBox  Grid.Column="1" TextWrapping="Wrap" Text="" Height="25" Name="txt_SaleNavigtor_PostalCode" />
+            <ComboBox Grid.Column="2" Height="25" Name="cmb_SaleNavigtor_Within"/>
+        </Grid>
+        <Grid Margin="19,274,10,95">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="139*"/>
+                <ColumnDefinition Width="192*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Company" />
+            <TextBox Grid.Column="1" TextWrapping="Wrap" Text="" Name="txt_SaleNavigtor_Company" Height="25"/>
+            <!--<ComboBox Grid.Column="2" Height="25" Name="cmb_SaleNavigtor_Company_CrrentOrPast" Margin="0,3,10,3"/>-->
+        </Grid>
+
+
+    </Grid>
+</UserControl>

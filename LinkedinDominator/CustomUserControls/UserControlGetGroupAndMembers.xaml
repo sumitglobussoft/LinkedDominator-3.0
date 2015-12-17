@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="LinkeddinDominator.CustomUserControls.UserControlGetGroupAndMembers"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             
+              xmlns:wpfx="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit/extended"
+             
+             mc:Ignorable="d" >
+    <Grid Height="423">
+        <GroupBox Header="Get Groups and Members">
+            <Grid>
+                <Grid Margin="0,0,0,281">
+                    <GroupBox Header="Get Groups" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="110" Width="578"/>
+                    <Grid Margin="0,26,10,65">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="103*"/>
+                            <ColumnDefinition Width="191*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Content="Get Groups" BorderBrush="Green" Margin="14,0,43,1" Height="25" Click="Button_Click" />
+                        <ComboBox  Height="25" Name="cmb_MsgGroupMemer_selectedAcc" SelectionChanged="cmb_MsgGroupMemer_selectedAcc_SelectionChanged"  Grid.Column="1" BorderBrush="Green" />
+
+                    </Grid>
+                    <Grid Margin="0,65,10,23" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="205*"/>
+                            <ColumnDefinition Width="383*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content=" Select Group"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="24" Margin="50,5,61,6" Width="83"/>
+                        <ComboBox  Name="cmb_members_of_selected_group"  Height="24" SelectionChanged="cmb_members_of_selected_group_SelectionChanged"  Grid.Column="2" BorderBrush="Green" />
+                    </Grid>
+                </Grid>
+                <Grid Margin="0,125,10,217">
+                    <CheckBox Content="With Search" HorizontalAlignment="Left" Margin="11,5,0,0" VerticalAlignment="Top" Width="110" Height="24"/>
+                    <TextBox x:Name="txt_MsgGroupMember_SearchKeyword" HorizontalAlignment="Left" Height="24" Margin="174,4,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="270"/>
+                    <CheckBox Content="With Excel Input" HorizontalAlignment="Left" Margin="11,35,0,0" VerticalAlignment="Top" Height="24"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="176,32,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="268"/>
+                    <Button Content="Browse"  VerticalAlignment="Top" Width="82" Height="24" HorizontalAlignment="Left" Margin="477,32,0,0"/>
+                </Grid>
+                <Grid Height="28" VerticalAlignment="Bottom" Margin="0,0,10,187">
+                    <Button Name="btn_GetMembers_of_SelectedGroup" Content="Get Members" HorizontalAlignment="Left" BorderBrush="Green" Width="109" Click="btn_GetMembers_of_SelectedGroup_Click" Height="24" VerticalAlignment="Bottom" />
+                    <CheckBox Content="1st Connection" HorizontalAlignment="Left" Margin="140,1,0,0" VerticalAlignment="Top" Height="24"/>
+                    <CheckBox Content="2nd Connection" HorizontalAlignment="Left" Margin="254,5,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="3rd Connection" HorizontalAlignment="Left" Margin="372,2,0,-1" VerticalAlignment="Top" Height="24" Width="101"/>
+                    <CheckBox Content="Select All" HorizontalAlignment="Left" Margin="489,1,0,0" VerticalAlignment="Top" Height="24"/>
+                </Grid>
+                <Grid Margin="0,221,0,39">
+                    <wpfx:CheckListBox Name="chklstBoxGroupMembers" />
+
+                </Grid>
+                
+                <Grid Margin="0,376,0,0"  >
+                    <Button BorderBrush="Green" Name="btn_Messages_MessageGroupMember_SaveSelectedMembers" Content="Save" Click="btn_Messages_MessageGroupMember_SaveSelectedMembers_Click" Height="25" VerticalAlignment="Top" Margin="0,-6,0,0"  ></Button>
+
+
+                </Grid>
+
+
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</UserControl>
